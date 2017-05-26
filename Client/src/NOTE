@@ -1,0 +1,7 @@
+封包协议:
+图片数据包头(8byte)|图片编号 4byte(int)|时间戳 8byte(long int)|图片数据长度8byte(long int)
+|图片数据|
+//数据包头,特殊序列用于检测新的数据包开始
+ public final static byte[] PICTURE_PACKAGE_HEAD = {(byte) 0xFF, (byte) 0xCF,
+            (byte) 0xFA, (byte) 0xBF, (byte) 0xF6, (byte) 0xAF, (byte) 0xFE,
+            (byte) 0xFF};
